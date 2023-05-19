@@ -1,0 +1,441 @@
+/* General Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Navbar */
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+body.fixed-nav {
+  padding-top: 64px; /* Adjust this value according to your navbar height */
+}
+
+.navbar {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar .logo a {
+  font-size: 2xl;
+  font-weight: 600;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar.dark .logo a {
+  color: #ffffff;
+}
+/* Navbar */
+/* ...existing styles... */
+
+/* Hamburger Menu */
+.navbar .menu-toggle {
+  display: block;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.navbar .menu-toggle input[type="checkbox"] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.navbar .menu-toggle label {
+  display: block;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.navbar .menu-toggle label span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .menu-toggle input[type="checkbox"]:checked ~ .navbar-menu {
+  display: block;
+}
+
+.navbar .menu-toggle input[type="checkbox"]:checked ~ .menu-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(2px, 2px);
+}
+
+.navbar .menu-toggle input[type="checkbox"]:checked ~ .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar .menu-toggle input[type="checkbox"]:checked ~ .menu-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+.navbar .navbar-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.navbar .navbar-menu a {
+  display: block;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-menu a:hover {
+  color: #555;
+}
+
+.navbar .navbar-menu.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar .navbar-menu.dark a {
+  color: #fff;
+}
+
+
+/* Hero Section */
+#hero {
+  background-color: #fff;
+  text-align: center;
+  padding: 40px 40px; /* Updated padding value */
+  transition: background-color 0.3s ease;
+}
+.logo-light {
+  fill: #000000; /* White color */
+}
+
+.logo-dark {
+  fill: #000000; /* Black color */
+}
+
+
+
+#hero.dark {
+  background-color: #000000;
+}
+
+#hero h1 {
+  font-size: 3xl;
+  font-weight: 600;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+#hero.dark h1 {
+  color: #ffffff;
+}
+
+#hero p {
+  margin-top: 1rem;
+  margin-bottom: 1rem; /* Add margin-bottom for space after the <p> element */
+  font-size: 16px;
+  color: #666;
+  padding: 20px;
+}
+
+#hero .login-button {
+  margin-top: 1rem;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+.btn.dark {
+  background-color: #fff;
+  color: #333;
+}
+
+.btn.dark:hover {
+  background-color: #eee;
+}
+
+/* About Section */
+#about {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 80px 0;
+  transition: background-color 0.3s ease;
+}
+
+#about.dark {
+  background-color: #333;
+}
+
+#about h2 {
+  font-size: 2xl;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+#about.dark h2 {
+  color: #fff;
+}
+
+#about p {
+  margin-top: 1rem;
+  font-size: lg;
+  color: #666;
+}
+
+/* Services Section */
+#services {
+  background-color: #fff;
+  text-align: center;
+  padding: 80px 0;
+  transition: background-color 0.3s ease;
+}
+
+#services.dark {
+  background-color: #333;
+}
+
+#services h2 {
+  font-size: 2xl;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+#services.dark h2 {
+  color: #fff;
+}
+
+#services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#services ul li {
+  display: inline-block;
+  margin: 10px;
+  font-size: lg;
+  color: #666;
+}
+
+#services.dark ul li {
+  color: #fff;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 80px 0;
+  transition: background-color 0.3s ease;
+}
+
+#contact.dark {
+  background-color: #333;
+}
+
+#contact h2 {
+  font-size: 2xl;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+#contact.dark h2 {
+  color: #fff;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+form button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+form input.dark,
+form textarea.dark {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+form button.dark {
+  background-color: #fff;
+  color: #333;
+}
+
+form button.dark:hover {
+  background-color: #eee;
+}
+
+/* Footer */
+
+
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  color: #666;
+}
+
+footer.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Light Theme */
+.footer {
+  background-color: #f8f8f8;
+  padding: 30px 0;
+}
+
+.footer.light h5,
+.footer.light p,
+.footer.light ul {
+  color: #333;
+}
+
+.footer.light ul li:last-child {
+  margin-bottom: 0;
+}
+
+.footer.light .divider {
+  border-color: #ddd;
+}
+
+.footer.light .social-icons a {
+  color: #777;
+}
+
+.footer.light .social-icons a:hover {
+  color: #333;
+}
+
+.footer.light p.text-gray-600 {
+  font-size: 12px;
+}
+
+/* Dark Theme */
+.footer.dark {
+  background-color: #333;
+}
+
+.footer.dark h5,
+.footer.dark p,
+.footer.dark ul {
+  color: #fff;
+}
+
+.footer.dark ul li:last-child {
+  margin-bottom: 0;
+}
+
+.footer.dark .divider {
+  border-color: #555;
+}
+
+.footer.dark .social-icons a {
+  color: #ccc;
+}
+
+.footer.dark .social-icons a:hover {
+  color: #fff;
+}
+
+.footer.dark p.text-gray-600 {
+  font-size: 12px;
+}
+
+
+.max-h-400 {
+  max-height: 400px;
+  width: auto;
+}
+.a {
+  stroke: #000000;
+  stroke-width: 0.4;
+}
+
+.b {
+  display: none;
+  stroke: #000000;
+  stroke-width: 0.4;
+}
+
+/* Dark theme */
+.dark .theme-toggle-icon {
+  color: #fff; /* Set the color to white */
+}
+/* Button styles */
+#loginWithHiveBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ff0000;
+  color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
